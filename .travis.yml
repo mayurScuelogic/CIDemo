@@ -1,4 +1,5 @@
-# file: .travis.yml
 language: objective-c
-script:
-- xcodebuild -project CIDemo.xcodeproj -scheme CIDemo -sdk iphonesimulator
+osx_image: xcode8.0
+xcode_project: CIDemo.xcodeproj
+xcode_scheme: CIDemo
+xcode_sdk: iphonesimulator8.4
