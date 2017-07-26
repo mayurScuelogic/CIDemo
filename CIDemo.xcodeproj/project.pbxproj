@@ -212,8 +212,8 @@
 				TargetAttributes = {
 					B942F5691E9CD27500EED759 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = FQWVPRQEN6;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = XE8UQR8342;
+						ProvisioningStyle = Manual;
 					};
 					B942F5821E9CD27600EED759 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -431,12 +431,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FQWVPRQEN6;
+				DEVELOPMENT_TEAM = XE8UQR8342;
 				INFOPLIST_FILE = CIDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Cuelogic.CIDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cuelogic.CIDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7bd42b30-d54e-46fa-9405-7874570bce11";
+				PROVISIONING_PROFILE_SPECIFIER = "CIDemo Development Profile";
 			};
 			name = Debug;
 		};
@@ -444,12 +446,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FQWVPRQEN6;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = XE8UQR8342;
 				INFOPLIST_FILE = CIDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Cuelogic.CIDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cuelogic.CIDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "39b5f5dd-59f5-4925-9d40-77499b75e528";
+				PROVISIONING_PROFILE_SPECIFIER = "CIDemo Distribution Profile";
 			};
 			name = Release;
 		};
