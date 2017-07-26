@@ -4,7 +4,7 @@
 //
 //  Created by Mayur Sojrani on 11/04/17.
 //  Copyright © 2017 Com. All rights reserved.
-//
+// Preapring For Demo
 
 #import <XCTest/XCTest.h>
 
@@ -27,7 +27,7 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    XCTAssertTrue(false , @"HARSHIT");
+   // XCTAssertTrue(false , @"Sachin");
 }
 
 - (void)testPerformanceExample {

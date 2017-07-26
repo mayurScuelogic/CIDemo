@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "WelcomeViewController.h"
 @interface ViewController ()
 
 @end
@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)welcomeClicked:(id)sender
+{
+    WelcomeViewController *con = [self.storyboard instantiateViewControllerWithIdentifier:@"WelcomeViewController"];
+    [self.navigationController pushViewController:con animated:YES];
+    
 }
 
 
