@@ -1,7 +1,6 @@
 language: objective-c
 env:
 global:
-- secure: "DrVad+ezJFfxS37YPQpv59Dq79sKRZQGvUSwxNWUSl2B8cx+/Ti5y1mzHuw5urZXKt4YPPvS4jDNMf/FQmckAXqvXPbecmTL8rMgy2sU4EIjaq8Eb4GOeSgCXpJeNAUDYRQcTtmTsCbuBBGk2SIgxAJRt/7ZYmCw54UEDvldkGHPIaFHqdGCdK5xgq94fUKEIwbS6HDwXvlAlObnLvVLY1Nn0kQm1rd5shsyIOYRKMpTTy6RswQHAijyJ6ZUo+uPqgmT9jYkE7sY0sbVuHzivluQdPGCZZK2RqWgv5h48BXsD5pzqCxDI3OGg8dnAkOCzC3MHYWk20xOoR3KGJnDajlhTC8xy5v9HxaZUkoui7YD4NUnuEPlI5H4wOSyRSr0Se9bJFYC7fH626HtRv49rsu5k1MyrAlsye2wWLSYGO4lirehT1NDvfo3PhR9+Ey3RIjhHvVRd0cdJq6eoxg5QNTKRnlYg1XDxiSQYCWA7tZeEDBQnFwCyGgsnfhVP4g1U9ns0KkFq0QudC8fhzCp7oeIUtPVc871GApbbbb5EeczT0WrhCjk28t4OOmwBXRnp9iQekiY2bSINpFLqmRFsB+pi/aPe7Cde9GZU61xHBCIf24dEA0h16H0Ob4YOQoob+6UCi+dFWTCdAVmtsRzYBffQzhkQ5hlPCFB9aQj+XY="
 - secure: "lv29RAXlNbgbkZ4PpdQ5BeVf5dAkZNzegFsTFfXjA2a1jxcWD9cSX0KQLXNtA3bBH7awUutVl6aeElHZbDwuj/TYmnUwArerhh/lrhfJ6BevC3p2zLEru20EVY7/XLWWLy5Xz4iyETwWnmeoLBehKkRqygtacgfvgkzdmLZiNoWHa4yFlAam/2EyYIgmlUPemeljAg8JQG6pC0kYVNmJgxppUudRCle5TCF11M/HolzLj3pir93uN0mnf47WPmakyN1Mca82Wp4ka6Hk8qyNtDDwR1eIdE8AoWHhYO8/oczu/Hhem3mf77Kk6V7X4bPcdiqxtUmybXbbppmzNOUMfGMA4jjeR4GpiDC/ZMFXeuVj2urauk7gbwVs9cQ+3di35OF0WVTBK0s4zlU3HfYldmHZnss9jxjGoiWAfNSUSu3Nwok/1IWq59/r5ImnIDWfOT2hUFpIkJkTf1LUuxmwrWnZUeMVaUHk0ou+cDKAIx4whAWXRozXxjFtbrqK49Hf4M59S2Vvbhvvq2S1Tg7+Geduxv3/KmJXCClxJ50s4e6+cSJ7Wo8lb4ySCdH9cMAxR2dfX81wxnJXrFNjkGfTq52K4FnG4NpeGaLMWFv02olGszVTul1TxIt78rJkjLJ37d19JHoE0l09ywYtFYND2GEqOimvSI6T78eqRy7YQGw="
 - APP_NAME="CIDemo"
 - XCODE_SCHEME="$APP_NAME"
@@ -12,9 +11,9 @@ global:
 - CERT_FOLDER="certfolder"
 - INFO_PLIST="$PROJECT_DIRECTORY/$APP_NAME/$APP_NAME/$APP_NAME-Info.plist"
 before_install:
-- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in ./certfolder/CIDemo_Distribution_Profile.mobileprovision.enc -d -a -out ./certfolder/CIDemo_Distribution_Profile.mobileprovision
-- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in ./certfolder/CIDemoDistribution.cer.enc -d -a -out ./certfolder/CIDemoDistribution.cer
-- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in ./certfolder/CIDemoDistributionKey.p12.enc -d -a -out ./certfolder/CIDemoDistributionKey.p12
+- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in repo/certfolder/CIDemo_Distribution_Profile.mobileprovision.enc -d -a -out repo/certfolder/CIDemo_Distribution_Profile.mobileprovision
+- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in repo/certfolder/CIDemoDistribution.cer.enc -d -a -out repo/certfolder/CIDemoDistribution.cer
+- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in repo/certfolder/CIDemoDistributionKey.p12.enc -d -a -out repo/certfolder/CIDemoDistributionKey.p12
 before_script:
 - ./travis-scripts/add-key.sh
 - ./travis-scripts/update-bundle.sh
