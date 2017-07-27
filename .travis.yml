@@ -11,9 +11,9 @@ global:
 - CERT_FOLDER="certfolder"
 - INFO_PLIST="$PROJECT_DIRECTORY/$APP_NAME/$APP_NAME/$APP_NAME-Info.plist"
 before_install:
-- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in repo/certfolder/CIDemo_Distribution_Profile.mobileprovision.enc -d -a -out repo/certfolder/CIDemo_Distribution_Profile.mobileprovision
-- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in repo/certfolder/CIDemoDistribution.cer.enc -d -a -out repo/certfolder/CIDemoDistribution.cer
-- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in repo/certfolder/CIDemoDistributionKey.p12.enc -d -a -out repo/certfolder/CIDemoDistributionKey.p12
+- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in ./certfolder/CIDemo_Distribution_Profile.mobileprovision.enc -d -a -out ./certfolder/CIDemo_Distribution_Profile.mobileprovision
+- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in ./certfolder/CIDemoDistribution.cer.enc -d -a -out ./certfolder/CIDemoDistribution.cer
+- openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in ./certfolder/CIDemoDistributionKey.p12.enc -d -a -out ./certfolder/CIDemoDistributionKey.p12
 before_script:
 - ./travis-scripts/add-key.sh
 - ./travis-scripts/update-bundle.sh
