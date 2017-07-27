@@ -9,7 +9,7 @@ global:
 - 'DEVELOPER_NAME="iPhone Distribution: Vikrant Labde"'
 - PROJECT_DIRECTORY="$PWD/"
 - SCRIPT_FOLDER="travis-scripts"
-- CERT_FOLDER="ios-certs"
+- CERT_FOLDER="certfolder"
 - INFO_PLIST="$PROJECT_DIRECTORY/$APP_NAME/$APP_NAME/$APP_NAME-Info.plist"
 before_install:
 - openssl aes-256-cbc -k "$OPENSSL_PASSWORD" -in ./certfolder/CIDemo_Distribution_Profile.mobileprovision.enc -d -a -out ./certfolder/CIDemo_Distribution_Profile.mobileprovision
